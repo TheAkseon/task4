@@ -6,6 +6,7 @@ public class Telekinesis : MonoBehaviour
 {
     [SerializeField] private float _speed;
     private Rigidbody _rigidbody;
+    private int _acceleration = 5;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class Telekinesis : MonoBehaviour
         }
         else if(Input.GetKey(KeyCode.Space))
         {
-            _speed = _speed + 5;
+            _speed = _speed + _acceleration;
             Move(Vector3.forward);
         }
     }
